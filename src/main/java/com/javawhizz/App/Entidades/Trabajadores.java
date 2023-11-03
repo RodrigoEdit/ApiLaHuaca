@@ -1,4 +1,4 @@
-package com.example.HotelHuaca.Entidades;
+package com.javawhizz.App.Entidades;
 import jakarta.persistence.*;
 
 @Entity

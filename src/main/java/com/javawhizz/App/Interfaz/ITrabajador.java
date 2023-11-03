@@ -1,8 +1,11 @@
-package com.example.HotelHuaca.Interfaz;
+package com.javawhizz.App.Interfaz;
+
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.example.HotelHuaca.Entidades.Trabajadores;
+import com.javawhizz.App.Entidades.Trabajadores;
+
+
 
 public interface ITrabajador extends CrudRepository<Trabajadores,Long> {
     

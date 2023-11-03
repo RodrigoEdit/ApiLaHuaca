@@ -1,4 +1,4 @@
-package com.example.HotelHuaca.Controlador;
+package com.javawhizz.App.Controlador;
 
 import java.util.List;
 
@@ -6,8 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 
-import com.example.HotelHuaca.Entidades.Cliente;
-import com.example.HotelHuaca.Servicios.ServiceCliente;
+import com.javawhizz.App.Entidades.Cliente;
+import com.javawhizz.App.Servicios.ServiceCliente;
+
 
 
 @RestController
