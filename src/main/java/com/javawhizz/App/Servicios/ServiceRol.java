@@ -1,4 +1,4 @@
-package com.javawhizz.App.Servicios;
+package com.example.HotelHuaca.Servicios;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,16 +6,15 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.javawhizz.App.Entidades.Rol;
-import com.javawhizz.App.Interfaz.IRol;
-
+import com.example.HotelHuaca.Entidades.Rol;
+import com.example.HotelHuaca.Interfaz.IRol;
 
 @Service
 public class ServiceRol {
     @Autowired
     private IRol iRol;
 
-     public Rol guardarol(Rol rol){
+    public Rol guardarol(Rol rol){
         return iRol.save(rol);
     }
 

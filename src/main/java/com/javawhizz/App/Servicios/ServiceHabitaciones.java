@@ -1,4 +1,4 @@
-package com.javawhizz.App.Servicios;
+package com.example.HotelHuaca.Servicios;
 
 
 import java.util.List;
@@ -7,9 +7,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.javawhizz.App.Entidades.Habitaciones;
-import com.javawhizz.App.Interfaz.IHabitaciones;
-
+import com.example.HotelHuaca.Entidades.Habitaciones;
+import com.example.HotelHuaca.Interfaz.IHabitaciones;
 
 @Service
 public class ServiceHabitaciones {

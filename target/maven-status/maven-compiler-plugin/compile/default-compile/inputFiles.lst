@@ -1,6 +1,5 @@
 c:\Users\rodrigo\Desktop\LA HUACA\BACKEND\app\src\main\java\com\javawhizz\App\Servicios\ServiceCategoria.java
 c:\Users\rodrigo\Desktop\LA HUACA\BACKEND\app\src\main\java\com\javawhizz\App\Interfaz\ICategoria.java
-c:\Users\rodrigo\Desktop\LA HUACA\BACKEND\app\src\main\java\com\javawhizz\App\Controlador\ValidacionController.java
 c:\Users\rodrigo\Desktop\LA HUACA\BACKEND\app\src\main\java\com\javawhizz\App\CorsConfig.java
 c:\Users\rodrigo\Desktop\LA HUACA\BACKEND\app\src\main\java\com\javawhizz\App\Entidades\Reserva.java
 c:\Users\rodrigo\Desktop\LA HUACA\BACKEND\app\src\main\java\com\javawhizz\App\Controlador\RolController.java
@@ -9,11 +8,11 @@ c:\Users\rodrigo\Desktop\LA HUACA\BACKEND\app\src\main\java\com\javawhizz\App\Se
 c:\Users\rodrigo\Desktop\LA HUACA\BACKEND\app\src\main\java\com\javawhizz\App\AppApplication.java
 c:\Users\rodrigo\Desktop\LA HUACA\BACKEND\app\src\main\java\com\javawhizz\App\Entidades\Habitaciones.java
 c:\Users\rodrigo\Desktop\LA HUACA\BACKEND\app\src\main\java\com\javawhizz\App\Controlador\ClienteController.java
-c:\Users\rodrigo\Desktop\LA HUACA\BACKEND\app\src\main\java\com\javawhizz\App\Interfaz\IUsuario.java
 c:\Users\rodrigo\Desktop\LA HUACA\BACKEND\app\src\main\java\com\javawhizz\App\Entidades\Trabajadores.java
 c:\Users\rodrigo\Desktop\LA HUACA\BACKEND\app\src\main\java\com\javawhizz\App\Entidades\Cliente.java
 c:\Users\rodrigo\Desktop\LA HUACA\BACKEND\app\src\main\java\com\javawhizz\App\Controlador\CategoriaController.java
 c:\Users\rodrigo\Desktop\LA HUACA\BACKEND\app\src\main\java\com\javawhizz\App\Servicios\ServiceRol.java
+c:\Users\rodrigo\Desktop\LA HUACA\BACKEND\app\src\main\java\com\javawhizz\App\Servicios\ServiceTrabajador.java
 c:\Users\rodrigo\Desktop\LA HUACA\BACKEND\app\src\main\java\com\javawhizz\App\Entidades\Categoria.java
 c:\Users\rodrigo\Desktop\LA HUACA\BACKEND\app\src\main\java\com\javawhizz\App\Controlador\ReservaController.java
 c:\Users\rodrigo\Desktop\LA HUACA\BACKEND\app\src\main\java\com\javawhizz\App\Controlador\HabitacionesController.java
@@ -21,8 +20,10 @@ c:\Users\rodrigo\Desktop\LA HUACA\BACKEND\app\src\main\java\com\javawhizz\App\Se
 c:\Users\rodrigo\Desktop\LA HUACA\BACKEND\app\src\main\java\com\javawhizz\App\Interfaz\IReserva.java
 c:\Users\rodrigo\Desktop\LA HUACA\BACKEND\app\src\main\java\com\javawhizz\App\Interfaz\IRol.java
 c:\Users\rodrigo\Desktop\LA HUACA\BACKEND\app\src\main\java\com\javawhizz\App\Interfaz\IHabitaciones.java
+c:\Users\rodrigo\Desktop\LA HUACA\BACKEND\app\src\main\java\com\javawhizz\App\Controlador\TrabajadorController.java
 c:\Users\rodrigo\Desktop\LA HUACA\BACKEND\app\src\main\java\com\javawhizz\App\Interfaz\ITrabajador.java
 c:\Users\rodrigo\Desktop\LA HUACA\BACKEND\app\src\main\java\com\javawhizz\App\Servicios\ServiceCliente.java
 c:\Users\rodrigo\Desktop\LA HUACA\BACKEND\app\src\main\java\com\javawhizz\App\Interfaz\ICliente.java
-c:\Users\rodrigo\Desktop\LA HUACA\BACKEND\app\src\main\java\com\javawhizz\App\Entidades\Usuario.java
+c:\Users\rodrigo\Desktop\LA HUACA\BACKEND\app\src\main\java\com\javawhizz\App\Controlador\ValidacionTController.java
 c:\Users\rodrigo\Desktop\LA HUACA\BACKEND\app\src\main\java\com\javawhizz\App\ServletInitializer.java
+c:\Users\rodrigo\Desktop\LA HUACA\BACKEND\app\src\main\java\com\javawhizz\App\Controlador\ValidarCController.java

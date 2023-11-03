@@ -1,4 +1,4 @@
-package com.javawhizz.App.Controlador;
+package com.example.HotelHuaca.Controlador;
 
 import java.util.List;
 
@@ -6,10 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 
-import com.javawhizz.App.Entidades.Cliente;
-import com.javawhizz.App.Servicios.ServiceCliente;
-
-
+import com.example.HotelHuaca.Entidades.Cliente;
+import com.example.HotelHuaca.Servicios.ServiceCliente;
 
 
 @RestController
@@ -40,7 +38,10 @@ public class ClienteController {
             clienteexistente.setApellido_materno(c.getApellido_materno());
             clienteexistente.setDni(c.getDni());
             clienteexistente.setTelefono(c.getTelefono());
-            clienteexistente.setDirecccion(c.getDirecccion());
+            clienteexistente.setDireccion(c.getDireccion());
+            clienteexistente.setUsuario(c.getUsuario());
+            clienteexistente.setContra(c.getContra());
+            clienteexistente.setCodrol(c.getCodrol());
             sc.guardarclientes(clienteexistente);
             return ResponseEntity.ok("true");
         } else {

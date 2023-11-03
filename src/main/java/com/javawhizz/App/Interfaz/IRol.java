@@ -1,10 +1,8 @@
-package com.javawhizz.App.Interfaz;
+package com.example.HotelHuaca.Interfaz;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.javawhizz.App.Entidades.Rol;
-
-
+import com.example.HotelHuaca.Entidades.Rol;
 
 public interface IRol extends CrudRepository<Rol,Long>{
     

@@ -1,4 +1,4 @@
-package com.javawhizz.App.Entidades;
+package com.example.HotelHuaca.Entidades;
 import jakarta.persistence.*;
 
 @Entity
@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 public class Rol {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long codigo;
+    private long codrol;
     private String Nombre;
 
 
@@ -15,15 +15,15 @@ public class Rol {
     }
 
     public Rol(long idrol, String nombre) {
-        codigo = idrol;
+        codrol = idrol;
         Nombre = nombre;
     }
     public long getIdRol() {
-        return codigo;
+        return codrol;
     }
     
     public void setIdRol(long idRo) {
-        codigo = idRo;
+        codrol = idRo;
     }
     public String getNombre() {
         return Nombre;

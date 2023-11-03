@@ -1,5 +1,4 @@
-package com.javawhizz.App.Controlador;
-
+package com.example.HotelHuaca.Controlador;
 
 import java.util.List;
 
@@ -7,10 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 
-import com.javawhizz.App.Entidades.Categoria;
-import com.javawhizz.App.Servicios.ServiceCategoria;
-
-
+import com.example.HotelHuaca.Entidades.Categoria;
+import com.example.HotelHuaca.Servicios.ServiceCategoria;
 
 @RestController
 @RequestMapping("/categoria")

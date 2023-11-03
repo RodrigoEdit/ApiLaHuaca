@@ -1,4 +1,4 @@
-package com.javawhizz.App.Controlador;
+package com.example.HotelHuaca.Controlador;
 
 import java.util.List;
 
@@ -14,10 +14,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.javawhizz.App.Entidades.Reserva;
-import com.javawhizz.App.Servicios.ServiceReserva;
-
-
+import com.example.HotelHuaca.Entidades.Reserva;
+import com.example.HotelHuaca.Servicios.ServiceReserva;
 
 @RestController
 @RequestMapping("/reserva")
@@ -44,6 +42,7 @@ public class ReservaController {
             reservaex.setIdcli(h.getIdcli());
             reservaex.setFecha_fin(h.getFecha_fin());
             reservaex.setFecha_inicio(h.getFecha_inicio());
+            reservaex.setIdtra(h.getIdtra());
             sh.guardareserva(reservaex);
             return ResponseEntity.ok("true");
         }else{
