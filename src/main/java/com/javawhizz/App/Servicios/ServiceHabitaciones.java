@@ -36,4 +36,9 @@ public class ServiceHabitaciones {
     public void eliminarhabitaciones(long id){
         iHabitaciones.deleteById(id);
     }
+
+    //
+    public List<Object[]> Listarallcon(){
+        return (List<Object[]>)iHabitaciones.Listarallcon();
+    }
 }

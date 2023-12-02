@@ -1,4 +1,6 @@
 package com.javawhizz.App.Controlador;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.javawhizz.App.Entidades.Habitaciones;
 import com.javawhizz.App.Servicios.ServiceHabitaciones;
+
+import java.util.Map;
 
 
 @RestController
@@ -65,6 +69,33 @@ public class HabitacionesController {
             return ResponseEntity.ok("true");
         }else{
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("false");
+        }
+    }
+
+    @GetMapping("/listarall")
+    public ResponseEntity<?> getAllNuevo() {
+        try {
+            List<Object[]> habitacion = sh.Listarallcon();
+
+            List<Map<String, Object>> pedidosList = new ArrayList<>();
+
+            for (Object[] pedido : habitacion) {
+                Map<String, Object> pedidoMap = new LinkedHashMap<>();
+                pedidoMap.put("Idh", pedido[0]);
+                pedidoMap.put("Idc", pedido[1]);
+                pedidoMap.put("Numero", pedido[2]);
+                pedidoMap.put("Precio", pedido[3]);
+                pedidoMap.put("Estado", pedido[4]);
+                pedidoMap.put("Categoria", pedido[5]);
+                pedidosList.add(pedidoMap);
+            }
+
+            return ResponseEntity.ok(pedidosList);
+        } catch (Exception e) {
+            Map<String, Object> errorRespuesta = new LinkedHashMap<>();
+            errorRespuesta.put("status", 500);
+            errorRespuesta.put("statusMessage", "Error en el servidor: " + e.getMessage());
+            return ResponseEntity.status(500).body(errorRespuesta);
         }
     }
 
