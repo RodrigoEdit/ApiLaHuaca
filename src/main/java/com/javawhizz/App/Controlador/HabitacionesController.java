@@ -33,6 +33,13 @@ public class HabitacionesController {
         return sh.guardarhabitaciones(c);
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<?> obtenerhabitacionPorId(@PathVariable long id) {
+        return sh.buscarhabitacionesporId(id)
+                .map(habitacion -> ResponseEntity.ok(habitacion))
+                .orElse(ResponseEntity.notFound().build());
+    }
+
     @PutMapping("/update/{id}")
     public ResponseEntity<String> editarHabitaciones(@PathVariable Long id , @RequestBody Habitaciones h)
     {
@@ -42,6 +49,7 @@ public class HabitacionesController {
             habitacionEx.setIdc(h.getIdc());
             habitacionEx.setNumero(h.getNumero());
             habitacionEx.setPrecio(h.getPrecio());
+            habitacionEx.setEstado(h.getEstado());
             sh.guardarhabitaciones(habitacionEx);
             return ResponseEntity.ok("true");
         }else{

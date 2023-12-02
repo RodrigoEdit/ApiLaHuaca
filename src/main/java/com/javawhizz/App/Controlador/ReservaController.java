@@ -44,6 +44,7 @@ public class ReservaController {
             reservaex.setFecha_fin(h.getFecha_fin());
             reservaex.setFecha_inicio(h.getFecha_inicio());
             reservaex.setIdtra(h.getIdtra());
+            reservaex.setEstado(h.getEstado());
             sh.guardareserva(reservaex);
             return ResponseEntity.ok("true");
         }else{

@@ -12,6 +12,7 @@ public class Reserva {
     private int Idcli;
     private int Idh;
     private int idtra;
+    private String estado;
 
 
     public Reserva(){
@@ -19,13 +20,14 @@ public class Reserva {
     }
 
 
-    public Reserva(long idr, String fecha_inicio, String fecha_fin, int idcli, int idh, int idtra) {
+    public Reserva(long idr, String fecha_inicio, String fecha_fin, int idcli, int idh, int idtra, String estado) {
         Idr = idr;
         this.fecha_inicio = fecha_inicio;
         this.fecha_fin = fecha_fin;
         Idcli = idcli;
         Idh = idh;
         this.idtra = idtra;
+        this.estado = estado;
     }
 
 
@@ -88,6 +90,17 @@ public class Reserva {
         this.idtra = idtra;
     }
 
+
+    public String getEstado() {
+        return estado;
+    }
+
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    
     
     
 

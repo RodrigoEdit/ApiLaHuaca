@@ -27,6 +27,13 @@ public class CategoriaController {
         return sc.guardarCategoria(c);
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<?> obtenerCategoriaPorId(@PathVariable long id) {
+        return sc.buscarCategoriaPorId(id)
+                .map(categoria -> ResponseEntity.ok(categoria))
+                .orElse(ResponseEntity.notFound().build());
+    }
+
     @PutMapping("/update/{id}")
     public ResponseEntity<String> editarCategoria(@PathVariable Long id, @RequestBody Categoria c) {
 
