@@ -1,6 +1,7 @@
 package com.javawhizz.App.Controlador;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
@@ -61,5 +62,14 @@ public class ClienteController {
         } else {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("false");
         }
+    }
+
+    @GetMapping("/buscar/{id}")
+    public ResponseEntity<Cliente> obtenerClientePorId(@PathVariable Long id) {
+        Optional<Cliente> clienteOptional = sc.buscarclientePorId(id);
+
+        return clienteOptional
+                .map(cliente -> new ResponseEntity<>(cliente, HttpStatus.OK))
+                .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 }

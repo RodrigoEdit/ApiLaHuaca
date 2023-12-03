@@ -1,5 +1,9 @@
 package com.javawhizz.App.Servicios;
 
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -35,4 +39,11 @@ public class ServiceReserva {
     public void eliminarreserva(long id){
         iReserva.deleteById(id);
     }
+
+    public List<Object[]> buscarReservasDetallePorIdCliente(Long idCliente) {
+        return (List<Object[]>)iReserva.findByClienteId(idCliente);
+    }
+
+   
+   
 }

@@ -1,5 +1,8 @@
 package com.javawhizz.App.Controlador;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -60,6 +63,32 @@ public class ReservaController {
             return ResponseEntity.ok("true");
         }else{
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("false");
+        }
+    }
+
+
+
+    @GetMapping("/reservaxcli/{idCliente}")
+    public ResponseEntity<?> getreservaxhabi(@PathVariable Long idCliente) {
+        try {
+            List<Object[]> reserva = sh.buscarReservasDetallePorIdCliente(idCliente);
+            List<Map<String, Object>> pedidosList = new ArrayList<>();
+
+            for (Object[] pedido : reserva) {
+                Map<String, Object> pedidoMap = new LinkedHashMap<>();
+                pedidoMap.put("fecha_inicio", pedido[0]);
+                pedidoMap.put("fecha_fin", pedido[1]);
+                pedidoMap.put("estado", pedido[2]);
+                pedidoMap.put("Numero", pedido[3]);
+                pedidosList.add(pedidoMap);
+            }
+
+            return ResponseEntity.ok(pedidosList);
+        } catch (Exception e) {
+            Map<String, Object> errorRespuesta = new LinkedHashMap<>();
+            errorRespuesta.put("status", 500);
+            errorRespuesta.put("statusMessage", "Error en el servidor: " + e.getMessage());
+            return ResponseEntity.status(500).body(errorRespuesta);
         }
     }
 }
